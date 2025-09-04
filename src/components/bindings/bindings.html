@@ -1,0 +1,23 @@
+<h1>Property Bindings</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam iusto assumenda sapiente id?</p>
+
+<div class="normal-field" [contentEditable]="isEditable">
+  @if(isEditable){
+  <p>You can try editing this text if you dont believe !</p>
+  } @else{
+  <p>It is not editable</p>
+  }
+</div>
+
+<h1>Event Handling</h1>
+<div class="err-handling">
+  <button (mouseover)="showMessage()" (mouseout)="hideMessage()" (click)="greet()">
+    {{ message }}
+  </button>
+</div>
+<div class="prev-next">
+  <button (click)="goToPrev()">Prev</button>
+  <button (click)="goToNext()">Next</button>
+</div>
+
+<hr />

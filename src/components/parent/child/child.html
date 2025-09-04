@@ -1,0 +1,14 @@
+<h1>{{ title() }}</h1>
+
+<div class="buttons">
+  <button [disabled]="counter() === 0" (click)="decrement.emit()">Decrease</button>
+  <h1>{{ counter() }}</h1>
+  <button (click)="increment.emit()">Increase</button>
+</div>
+
+<div class="prev-next">
+  <button (click)="goToPrev()">Prev</button>
+  <button (click)="goToNext()">Next</button>
+</div>
+
+<hr />

@@ -1,0 +1,10 @@
+<div class="products">
+  @for (product of products; track product.id) {
+  <div class="card">
+    <img height="200" width="300" ngSrc="abhi.png" [alt]="product.name" />
+    <h1>{{ product.name }}</h1>
+    <h4>{{ product.category }}</h4>
+    <button>Add to Cart</button>
+  </div>
+  }
+</div>

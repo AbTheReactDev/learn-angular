@@ -1,0 +1,28 @@
+<h1>Template Driven Form</h1>
+<div class="template-driven-form">
+  <label for="framework">
+    <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
+  </label>
+
+  <button [disabled]="!favoriteFramework.length" (click)="showFramework()">Show Framework</button>
+</div>
+
+<hr />
+
+<h1>Reactive Forms</h1>
+<div class="template-driven-form">
+  <form (ngSubmit)="handleSubmit()" [formGroup]="profileForm">
+    <label for="name">
+      <input type="text" placeholder="Name" formControlName="name" />
+    </label>
+    <label for="email">
+      <input type="text" placeholder="Email" formControlName="email" />
+    </label>
+    <button [disabled]="!profileForm.valid" type="submit">Submit</button>
+    <button [disabled]="!profileForm.valid" type="button" (click)="clearForm()">Clear Form</button>
+  </form>
+</div>
+
+<!-- <h2>Profile Form</h2>
+<p>Name: {{ profileForm.value.name }}</p>
+<p>Email: {{ profileForm.value.email }}</p> -->

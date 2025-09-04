@@ -1,0 +1,21 @@
+<h1>{{ name() }}</h1>
+<div class="img-container">
+  <img ngSrc="abhi.png" height="200" width="300" [alt]="name()" priority />
+</div>
+
+<p>{{ designation }} {{ 1 + 1 }}</p>
+
+<p>{{ aboutMe }}</p>
+
+@if(isKokani){
+<h1>Yes, I am Assal Kokani !</h1>
+}@else {
+<h1>No, I am not Assal Kokani !</h1>
+} @defer {
+<app-hobbies [hobbies]="myHobbies" />
+}@loading (minimum 2s){
+<p>Hobbies loading...</p>
+}
+<button (click)="goToNext()">Next</button>
+
+<hr />

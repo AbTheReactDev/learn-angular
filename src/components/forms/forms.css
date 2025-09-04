@@ -1,0 +1,16 @@
+input {
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.template-driven-form, form{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
